@@ -1,0 +1,457 @@
+/* style.css */
+
+/* 全局样式 */
+body {
+    font-family: 'Open Sans', sans-serif; /* 更改主字体为 Open Sans */
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* 更柔和的背景色 */
+    color: #34495e;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px; /* 增加整体边距 */
+    box-sizing: border-box; /* 盒模型为边框盒 */
+}
+
+/* 容器样式 */
+.container {
+    width: 100%;
+    max-width: 1000px; /* 增加最大宽度 */
+    background: #ffffff;
+    border-radius: 15px; /* 更大的圆角 */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); /* 更明显的阴影 */
+    overflow: hidden; /* 确保内容不会溢出圆角 */
+}
+
+/* 头部样式 (Hero Section) */
+.hero-section {
+    background: linear-gradient(135deg, #4a90e2 0%, #7b68ee 100%); /* 渐变背景 */
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.hero-section h1 {
+    font-family: 'Montserrat', sans-serif; /* 标题字体 */
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* 标题阴影 */
+}
+.hero-section p.tagline {
+    font-size: 1.3em;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* 个人头像 */
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 0 auto 25px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid rgba(255, 255, 255, 0.3); /* 头像边框 */
+    overflow: hidden;
+}
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profile-avatar .fas.fa-user-circle {
+    font-size: 6em; /* Font Awesome 默认头像大小 */
+    color: #ccc;
+}
+
+
+/* 卡片样式 */
+.card {
+    background-color: #ffffff;
+    padding: 35px 45px; /* 调整内边距 */
+    margin-bottom: 25px; /* 增加卡片间距 */
+    border-bottom: 1px solid #eef2f5; /* 底部细线分隔 */
+}
+.card:last-of-type {
+    border-bottom: none; /* 最后一个卡片没有底部线 */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+/* 部分标题样式 */
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2em;
+    color: #2c3e50;
+    margin-top: 0; /* 移除默认顶部 margin */
+    margin-bottom: 25px;
+    border-bottom: 3px solid #7b68ee; /* 下划线 */
+    display: inline-block; /* 使下划线只包裹文本 */
+    padding-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.section-title .icon-left {
+    margin-right: 12px;
+    color: #7b68ee; /* 图标颜色 */
+}
+
+/* 段落样式 */
+p {
+    margin-bottom: 18px;
+    color: #555;
+    text-align: justify; /* 段落两端对齐 */
+}
+p strong {
+    color: #2c3e50; /* 加粗文字颜色 */
+}
+
+/* 链接样式 */
+a {
+    color: #4a90e2; /* 蓝色链接 */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+a:hover {
+    color: #2e7ad6; /* 悬停颜色 */
+    text-decoration: underline;
+}
+
+/* 学习/研究领域布局 */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 响应式网格布局 */
+    gap: 25px;
+    margin-top: 20px;
+}
+.field-item {
+    background-color: #f7f9fc;
+    border: 1px solid #e1e8ed;
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.field-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border-color: #7b68ee;
+}
+.field-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    font-size: 1.4em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.field-item h3 .fas {
+    margin-right: 10px;
+    color: #4a90e2;
+    font-size: 1.2em;
+}
+.field-item p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 0;
+}
+
+
+/* 列表样式 (获奖、论文、学习动态) */
+.fancy-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.fancy-list li {
+    background-color: #fdfdfd;
+    margin-bottom: 15px;
+    padding: 20px 25px;
+    border-radius: 10px;
+    border: 1px solid #e8edf1;
+    transition: all 0.3s ease;
+    position: relative; /* 用于添加装饰线 */
+    padding-left: 45px; /* 为装饰线和图标留出空间 */
+}
+.fancy-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+.fancy-list li::before { /* 左侧装饰点 */
+    content: '\2022'; /* 圆点符号 */
+    color: #7b68ee;
+    font-size: 1.5em;
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    line-height: 1;
+}
+.list-year {
+    display: block;
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.list-description {
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+
+/* 时间线样式 (年度总结与未来展望) */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+.timeline::before { /* 时间轴中线 */
+    content: '';
+    position: absolute;
+    left: 20px; /* 调整位置 */
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #e0e0e0;
+    border-radius: 2px;
+}
+.timeline-item {
+    position: relative;
+    margin-left: 50px; /* 为时间点和线留出空间 */
+    padding: 15px 20px;
+    background-color: #fdfdfd;
+    border: 1px solid #e8edf1;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+.timeline-item::before { /* 时间点 */
+    content: '';
+    position: absolute;
+    left: -38px; /* 调整位置使其与中线对齐 */
+    top: 25px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #7b68ee;
+    border: 3px solid #ffffff; /* 白色边框 */
+    box-shadow: 0 0 0 3px #7b68ee; /* 外发光效果 */
+}
+.timeline-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+.timeline-item p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 0;
+}
+
+
+/* 联系方式样式 */
+.contact-info {
+    margin-top: 20px;
+}
+.contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #555;
+}
+.contact-info p .icon-contact {
+    margin-right: 15px;
+    color: #7b68ee; /* 图标颜色 */
+    font-size: 1.3em;
+    width: 25px; /* 固定宽度，对齐图标 */
+    text-align: center;
+}
+.contact-info p a {
+    font-weight: 600;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #fcfcfc;
+    color: #777;
+    font-size: 0.9em;
+    border-top: 1px solid #eef2f5;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .container {
+        max-width: 800px;
+    }
+    .hero-section h1 {
+        font-size: 3em;
+    }
+    .section-title {
+        font-size: 2em;
+    }
+    .card {
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 25px 15px;
+    }
+    .container {
+        width: 100%;
+        max-width: 600px;
+    }
+    .hero-section {
+        padding: 40px 15px;
+    }
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+    .hero-section p.tagline {
+        font-size: 1.1em;
+    }
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+    .profile-avatar .fas.fa-user-circle {
+        font-size: 5em;
+    }
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
+    }
+    .card {
+        padding: 25px 30px;
+    }
+    .grid-layout {
+        grid-template-columns: 1fr; /* 小屏幕下改为单列 */
+    }
+    .fancy-list li, .timeline-item {
+        padding-left: 35px;
+        margin-bottom: 20px;
+    }
+    .fancy-list li::before {
+        left: 10px;
+        top: 16px;
+    }
+    .timeline::before {
+        left: 15px;
+    }
+    .timeline-item {
+        margin-left: 40px;
+    }
+    .timeline-item::before {
+        left: -32px;
+    }
+    .contact-info p {
+        font-size: 1em;
+    }
+    .contact-info p .icon-contact {
+        margin-right: 10px;
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px 10px;
+    }
+    .container {
+        border-radius: 10px;
+    }
+    .hero-section {
+        padding: 30px 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .hero-section h1 {
+        font-size: 2em;
+    }
+    .hero-section p.tagline {
+        font-size: 1em;
+    }
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+    }
+    .profile-avatar .fas.fa-user-circle {
+        font-size: 4em;
+    }
+    .section-title {
+        font-size: 1.6em;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+    }
+    .card {
+        padding: 20px 20px;
+    }
+    .field-item {
+        padding: 20px;
+    }
+    .fancy-list li {
+        padding: 15px 20px;
+        padding-left: 30px;
+    }
+    .fancy-list li::before {
+        left: 8px;
+        top: 14px;
+        font-size: 1.3em;
+    }
+    .timeline-item {
+        padding: 12px 15px;
+        margin-left: 30px;
+        margin-bottom: 15px;
+    }
+    .timeline::before {
+        left: 10px;
+    }
+    .timeline-item::before {
+        left: -28px;
+        width: 14px;
+        height: 14px;
+        top: 20px;
+    }
+    .contact-info p {
+        font-size: 0.95em;
+    }
+    .contact-info p .icon-contact {
+        margin-right: 8px;
+        font-size: 1.1em;
+    }
+    footer {
+        padding: 20px 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}
