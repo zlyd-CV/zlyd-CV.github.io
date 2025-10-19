@@ -15,6 +15,9 @@
     <div class="container">
         <header class="hero-section">
             <div class="profile-avatar">
+                <div class="geo-frame geo-layer-1"></div>
+                <div class="geo-frame geo-layer-2"></div>
+                <div class="geo-frame geo-layer-3"></div>
                 <img src="https://raw.githubusercontent.com/zlyd-CV/zlyd-CV.github.io/main/头像.jpg" alt="头像">
             </div>
             <h1>zlyd-CV</h1>
@@ -39,7 +42,7 @@
             <div class="grid-layout">
                 <div class="field-item">
                     <h3><i class="fas fa-brain"></i> [深度学习Deep Learning]</h3>
-                    <p><strong>利用神经网络对图像进行语义分割、 目标分类等任务</strong>></p>
+                    <p><strong>利用神经网络对图像进行语义分割、 目标分类等任务</strong></p>
                 </div>
                 <div class="field-item">
                     <h3><i class="fas fa-language"></i> [计算机视觉Computer Vision]</h3>
@@ -79,41 +82,51 @@
             </ul>
         </section>
 
-        <!-- 新增版块：年度总结与未来展望 -->
-        <section id="annual-summary" class="card">
-            <h2 class="section-title"><i class="fas fa-calendar-alt icon-left"></i>年度总结与未来展望</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <h3>[大一学年] 年度总结</h3>
-                    <p>
-                        作为大一计算机相关的工科新生，不得不承认计算机真的是一项很伟大的工具，其中可以做的事非常之多。在迷茫的时候与相关朋友聊天时得到了相关指导后开始入门深度学习和计算机视觉等领域，
-                        虽然他是做YOLO和SLAM的，而我是做医学AI的，但是其实这些不同学科之间有很多通用性。在结束了高等数学、线性代数、概率论等相关学科的基础学习后，
-                        我在2025年的大一暑假正式开始了该领域的学习。
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <h3>未来展望</h3>
-                    <p>
-                        期待能自己主持一篇大创项目，亦或参加更多有含金量的比赛，认识到更多该领域的学者们。
-                    </p>
+        <!-- 新增版块：年度总结与未来展望 (可展开) -->
+        <section id="annual-summary" class="card collapsible-section">
+            <div class="collapsible-header" onclick="toggleCollapse('annual-summary-content')">
+                <h2 class="section-title"><i class="fas fa-calendar-alt icon-left"></i>年度总结与未来展望</h2>
+                <i class="fas fa-chevron-down collapse-icon"></i>
+            </div>
+            <div id="annual-summary-content" class="collapsible-content">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>[大一学年] 年度总结</h3>
+                        <p>
+                            作为大一计算机相关的工科新生，不得不承认计算机真的是一项很伟大的工具，其中可以做的事非常之多。在迷茫的时候与相关朋友聊天时得到了相关指导后开始入门深度学习和计算机视觉等领域，
+                            虽然他是做YOLO和SLAM的，而我是做医学AI的，但是其实这些不同学科之间有很多通用性。在结束了高等数学、线性代数、概率论等相关学科的基础学习后，
+                            我在2025年的大一暑假正式开始了该领域的学习。
+                        </p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>未来展望</h3>
+                        <p>
+                            期待能自己主持一篇大创项目，亦或参加更多有含金量的比赛，认识到更多该领域的学者们。
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 新增版块：学习动态 -->
-        <section id="learning-updates" class="card">
-            <h2 class="section-title"><i class="fas fa-chalkboard-teacher icon-left"></i>学习动态</h2>
-            <ul class="fancy-list">
-                <li>
-                    <span class="list-year">[2025.10.16]</span> <strong>完成了较为经典的基础卷积神经网络学习</strong>
-                    <p class="list-description">完成并实践了LeNet、AlexNet、GoogLeNet、VGG、ResNet网络的学习，并精读了ResNet的论文《Deep Residual Learning for Image Recognition》</p>
-                </li>
-                <li>
-                    <span class="list-year">[2025.10]</span> <strong>开始准备明年4月份的大创申请书</strong>
-                    <p class="list-description">这将会是个巨大的工程...</p>
-                </li>
-                <!-- 根据需要添加更多学习动态 -->
-            </ul>
+        <!-- 新增版块：学习动态 (可展开) -->
+        <section id="learning-updates" class="card collapsible-section">
+            <div class="collapsible-header" onclick="toggleCollapse('learning-updates-content')">
+                <h2 class="section-title"><i class="fas fa-chalkboard-teacher icon-left"></i>学习动态</h2>
+                <i class="fas fa-chevron-down collapse-icon"></i>
+            </div>
+            <div id="learning-updates-content" class="collapsible-content">
+                <ul class="fancy-list">
+                    <li>
+                        <span class="list-year">[2025.10.16]</span> <strong>完成了较为经典的基础卷积神经网络学习</strong>
+                        <p class="list-description">完成并实践了LeNet、AlexNet、GoogLeNet、VGG、ResNet网络的学习，并精读了ResNet的论文《Deep Residual Learning for Image Recognition》</p>
+                    </li>
+                    <li>
+                        <span class="list-year">[2025.10]</span> <strong>开始准备明年4月份的大创申请书</strong>
+                        <p class="list-description">这将会是个巨大的工程...</p>
+                    </li>
+                    <!-- 根据需要添加更多学习动态 -->
+                </ul>
+            </div>
         </section>
 
         <section id="contact" class="card">
@@ -124,16 +137,30 @@
                   邮箱1：<a href="mailto:zlyd20060615@163.com" style="margin-right: 15px;">zlyd20060615@163.com</a>
                   邮箱2：<a href="mailto:zhouluoyidi@gmail.com">zhouluoyidi@gmail.com</a>
                 </p>
-                <p><i class="fas fa-phone-alt icon-contact"></i> 电话：[暂不提供]</p>
+                <p><i class="fas fa-phone-alt icon-contact"></i> 电话：19144210452</p>
                 <p><i class="fab fa-github icon-contact"></i> GitHub：<a href="https://github.com/zlyd-CV" target="_blank">https://github.com/zlyd-CV</a></p>
                 <p><i class="fab fa-linkedin icon-contact"></i> AMiner：<a href="https://www.aminer.cn/profile/68f0ec1d9329f86005abb67c" target="_blank">https://www.aminer.cn/profile/68f0ec1d9329f86005abb67c</a></p>
                 <p><i class="fas fa-globe icon-contact"></i> 个人网站/博客：<a href="https://scholar.google.com/citations?hl=zh-CN&user=R4WXdXMAAAAJ&view_op=list_works&gmla=AH8HC4xCbDlc__IIFtu0yM6kMxdgb-WsWL3AyoJN9GwVOqLz2cmVJy0RnypqC4pV238y4eg5CKEMN4nSk8YrJ7n-MguIAuTJo8vv-dD-Z67GRAcL9EQqFyIMAbJUXk6M35Imcjk5RCN9yXj7" target="_blank">谷歌学术主页</a></p>
             </div>
         </section>
-
-        <footer>
-            <p>&copy; [2025] [zlyd-CV]. All rights reserved.</p>
-        </footer>
+        
+        <p style="text-align: center; margin-top: 40px; margin-bottom: 60px; color: var(--text-light); font-size: 0.95em; opacity: 0.7;">&copy; [2025] [zlyd-CV]. All rights reserved.</p>
     </div>
+
+    <!-- JavaScript for collapsible sections -->
+    <script>
+        function toggleCollapse(contentId) {
+            const content = document.getElementById(contentId);
+            const icon = content.previousElementSibling.querySelector('.collapse-icon');
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.classList.add('active');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
 </body>
 </html>
