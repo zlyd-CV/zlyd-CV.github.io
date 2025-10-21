@@ -403,6 +403,24 @@ body::after {
     z-index: 3;
     animation: taglineEntry 1s ease 0.7s backwards;
     opacity: 0.75;
+    margin-bottom: 8px;
+}
+
+/* 更新信息样式 */
+.hero-section p.update-info {
+    font-size: 0.85em;
+    color: var(--text-light);
+    letter-spacing: 2px;
+    font-weight: 500;
+    position: relative;
+    z-index: 3;
+    opacity: 0.65;
+    animation: taglineEntry 1s ease 0.9s backwards;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08), rgba(245, 87, 108, 0.08));
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    border: 1px solid rgba(102, 126, 234, 0.15);
 }
 
 @keyframes taglineEntry {
@@ -819,11 +837,39 @@ a:hover::after {
     filter: drop-shadow(0 4px 15px rgba(102, 126, 234, 0.3));
 }
 
+/* 深度学习 - 紫色脑图标 */
+.field-item:nth-child(1) h3 .fa-brain {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 15px rgba(102, 126, 234, 0.4));
+}
+
+/* 计算机视觉 - 青蓝色眼睛图标 */
+.field-item:nth-child(2) h3 .fa-eye {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 15px rgba(79, 172, 254, 0.4));
+}
+
+/* 数据科学 - 橙黄色图表图标 */
+.field-item:nth-child(3) h3 .fa-chart-line {
+    background: linear-gradient(135deg, #fa709a, #fee140);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 15px rgba(250, 112, 154, 0.4));
+}
+
 .field-item:nth-child(2) h3 .fas {
     background: linear-gradient(135deg, #4facfe, #00f2fe);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 4px 15px rgba(79, 172, 254, 0.4));
 }
 
 .field-item:nth-child(3) h3 .fas {
@@ -831,6 +877,7 @@ a:hover::after {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    filter: drop-shadow(0 4px 15px rgba(250, 112, 154, 0.4));
 }
 
 .field-item:hover h3 .fas {
@@ -912,6 +959,13 @@ a:hover::after {
         0 0 0 1px rgba(255, 255, 255, 0.8) inset;
 }
 
+/* 获奖和论文列表标题样式 */
+.fancy-list li strong {
+    font-size: 1.15em;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
 .list-year {
     display: inline-block;
     padding: 8px 18px;
@@ -940,10 +994,11 @@ a:hover::after {
 }
 
 .list-description {
-    color: var(--text-light);
-    font-style: italic;
+    color: var(--text-medium);
+    font-style: normal;
     margin-top: 10px;
-    font-size: 0.94em;
+    font-size: 1em;
+    line-height: 1.8;
 }
 
 /* ============================================
@@ -1064,6 +1119,19 @@ a:hover::after {
     letter-spacing: -0.3px;
 }
 
+.timeline-item p {
+    color: var(--text-medium);
+    line-height: 1.9;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1em;
+}
+
+.timeline-item p:last-child {
+    margin-bottom: 0;
+}
+
 /* ============================================
     可折叠区域增强
    ============================================ */
@@ -1117,6 +1185,74 @@ a:hover::after {
     max-height: 6000px;
     opacity: 1;
     margin-top: 40px;
+}
+
+/* ============================================
+    更新日志容器
+   ============================================ */
+
+.changelog-container {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(248,249,255,0.95));
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 25px;
+    border: 2px solid rgba(102, 126, 234, 0.1);
+    box-shadow: 
+        0 10px 40px rgba(102, 126, 234, 0.08),
+        0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+}
+
+.changelog-entry {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 35px;
+    border-left: 3px solid transparent;
+    border-image: linear-gradient(180deg, #667eea, #f5576c) 1;
+    transition: all 0.4s ease;
+}
+
+.changelog-entry:last-child {
+    margin-bottom: 0;
+}
+
+.changelog-entry:hover {
+    padding-left: 40px;
+    border-image: linear-gradient(180deg, #667eea, #764ba2, #f5576c) 1;
+}
+
+.changelog-entry h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #667eea, #764ba2, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+.changelog-entry ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.changelog-entry li {
+    color: var(--text-medium);
+    line-height: 2;
+    margin-bottom: 8px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    padding-left: 0;
+}
+
+.changelog-entry li:hover {
+    color: var(--text-dark);
+    transform: translateX(5px);
+}
+
+.changelog-entry li:last-child {
+    margin-bottom: 0;
 }
 
 /* ============================================
@@ -1176,6 +1312,31 @@ a:hover::after {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    filter: drop-shadow(0 4px 15px rgba(102, 126, 234, 0.4));
+}
+
+/* 学术平台图标特殊样式 */
+.contact-info p .fa-user-graduate {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 15px rgba(245, 87, 108, 0.4));
+}
+
+.contact-info p .fa-graduation-cap {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 4px 15px rgba(79, 172, 254, 0.4));
+}
+
+.contact-info p .fa-github {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     filter: drop-shadow(0 4px 15px rgba(102, 126, 234, 0.4));
 }
 
