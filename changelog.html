@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更新日志 - zlyd-CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-button {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,249,255,0.98));
+            backdrop-filter: blur(20px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-decoration: none;
+        }
+        
+        .back-button i {
+            font-size: 1.5em;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.4s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-10px) scale(1.1);
+            box-shadow: 0 12px 40px rgba(102, 126, 234, 0.25);
+        }
+        
+        .back-button:hover i {
+            transform: translateX(-3px);
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .page-title h1 {
+            font-size: 3.5em;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: -2px;
+            filter: drop-shadow(0 10px 30px rgba(102, 126, 234, 0.3));
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button" title="返回主页">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <div class="container">
+        <div class="page-title">
+            <h1><i class="fas fa-history"></i> 更新日志</h1>
+        </div>
+
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-history icon-left"></i>更新日志</h2>
+            <div class="changelog-container">
+                <div class="changelog-entry">
+                    <h3>v1.2.0 - 2025.10.30</h3>
+                    <ul>
+                        <li>1.网站架构重大升级：从单页网站改造为多页面网站</li>
+                        <li>2.新增主页导航功能，通过卡片式设计进入各个模块</li>
+                        <li>3.为每个导航卡片添加详细的文字说明，更好地展示内容</li>
+                        <li>4.每个模块独立成页，保持原有设计风格</li>
+                        <li>5.所有子页面添加返回主页按钮，提升用户体验</li>
+                        <li>6.优化页面结构，便于后续内容更新和维护</li>
+                    </ul>
+                </div>
+                
+                <div class="changelog-entry">
+                    <h3>v1.1.1 - 2025.10.21</h3>
+                    <ul>
+                        <li>1.新增了版本号与更新日志模块，用于记录更新内容</li>
+                    </ul>
+                </div>
+                
+                <div class="changelog-entry">
+                    <h3>v1.1.0 - 2025.10.19</h3>
+                    <ul>
+                        <li>1.重新设计整体配色方案</li>
+                        <li>2.增强交互动画效果，提升交互反馈</li>
+                        <li>3.为一些板块设计了折叠样式</li>
+                    </ul>
+                </div>
+                
+                <div class="changelog-entry">
+                    <h3>v1.0.0 - 2025.10.17</h3>
+                    <ul>
+                        <li>1.网站初始版本上线</li>
+                        <li>2.完成个人介绍、学习领域等基础模块</li>
+                        <li>3.添加联系方式信息</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

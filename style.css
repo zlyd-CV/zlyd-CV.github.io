@@ -123,7 +123,7 @@ body::after {
 
 .hero-section {
     text-align: center;
-    padding: 120px 60px 140px;
+    padding: 120px 60px 60px;
     position: relative;
     margin-bottom: 100px;
     background: 
@@ -133,7 +133,7 @@ body::after {
     box-shadow: 
         0 25px 80px rgba(102, 126, 234, 0.25),
         0 0 0 1px rgba(255,255,255,0.5) inset;
-    overflow: hidden;
+    overflow: visible;
     backdrop-filter: blur(20px);
 }
 
@@ -158,31 +158,36 @@ body::after {
     100% { background-position: 300% 50%; }
 }
 
-/* 旋转星云背景 */
+/* 柔和渐变光晕背景 - 替代旋转星云 */
 .hero-section::after {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: conic-gradient(
-        from 0deg at 50% 50%,
-        transparent 0deg,
-        rgba(102, 126, 234, 0.08) 60deg,
-        transparent 120deg,
-        rgba(245, 87, 108, 0.08) 180deg,
-        transparent 240deg,
-        rgba(0, 242, 254, 0.08) 300deg,
-        transparent 360deg
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(
+        ellipse at center,
+        rgba(102, 126, 234, 0.03) 0%,
+        rgba(245, 87, 108, 0.02) 50%,
+        transparent 100%
     );
-    animation: rotateNebula 20s linear infinite;
+    animation: subtleGlow 8s ease-in-out infinite;
     pointer-events: none;
+    border-radius: 50%;
+    filter: blur(40px);
 }
 
-@keyframes rotateNebula {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes subtleGlow {
+    0%, 100% { 
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% { 
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
 }
 
 /* 炫酷头像 */

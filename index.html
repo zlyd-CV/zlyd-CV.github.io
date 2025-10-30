@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="zh-CN" xmlns="http://www.w3.org/1999/html">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zlyd-CV的个人介绍网站</title>
+    <title>zlyd-CV的个人网站</title>
     <!-- 引入Google Fonts - Montserrat 和 Open Sans，提供更现代的字体选择 -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- 引入 Font Awesome 图标库，用于更丰富的图标选择 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- 引入自定义的样式表 -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
     <div class="container">
@@ -22,181 +23,173 @@
             </div>
             <h1>zlyd-CV</h1>
             <p class="tagline">create on 2025.10.17</p>
-            <p class="update-info">last update: 2025.10.21 | version: v1.1.1</p>
+            <p class="update-info">last update: 2025.10.30 | version: v1.2.0</p>
+            <p class="welcome-text">欢迎来到我的个人网站，点击下方卡片了解更多信息</p>
+            
+            <!-- 重大事件倒计时卡片 -->
+            <div class="countdown-card">
+                <div class="countdown-header">
+                    <i class="fas fa-clock"></i>
+                    <h3>重大事件倒计时</h3>
+                </div>
+                <div class="countdown-content">
+                    <div class="countdown-item">
+                        <div class="countdown-icon">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                        <div class="countdown-info">
+                            <h4>英语四级考试</h4>
+                            <p class="countdown-date" id="cet4-countdown">计算中...</p>
+                        </div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="countdown-info">
+                            <h4>2028考研</h4>
+                            <p class="countdown-subtitle">27年12月初试</p>
+                            <p class="countdown-date" id="kaoyan-countdown">计算中...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <section id="introduction" class="card">
-            <h2 class="section-title"><i class="fas fa-user-graduate icon-left"></i>个人介绍</h2>
-            <p>
-                您好！我是一名对 <strong>医工交叉领域</strong> 充满热情的本科生。目前在 <strong>山东第一医科大学</strong>攻读本科学位，专注于 <strong>医学人工智能、计算机视觉</strong>的相关知识学习。
-            </p>
-            <p>
-                目前，我还在努力地学习相关的基础知识，希望能够认识更多的对医工交叉抱有强烈兴趣的大佬们，也欢迎各位学术大咖给予我相应的学习建议或者志同道合的同学与我进行相关的学术交流。
-            </p>
-            <p>
-                个人联系方式：<strong>微信：19144210452</strong>
-            </p>
-        </section>
-
-        <section id="study-fields" class="card">
-            <h2 class="section-title"><i class="fas fa-microscope icon-left"></i>学习领域</h2>
-            <div class="grid-layout">
-                <div class="field-item">
-                    <h3><i class="fas fa-brain"></i> [深度学习Deep Learning]</h3>
-                    <p><strong>利用神经网络对图像进行语义分割、 目标分类等任务</strong></p>
+        <!-- 导航卡片网格 -->
+        <section class="navigation-grid">
+            <a href="introduction.html" class="nav-card nav-card-1">
+                <div class="nav-card-icon">
+                    <i class="fas fa-user-graduate"></i>
                 </div>
-                <div class="field-item">
-                    <h3><i class="fas fa-eye"></i> [计算机视觉Computer Vision]</h3>
-                    <p><strong>通过相关通道变换实现图像增强、滤波消除图像噪声、算子实现边缘检测，医学影像的三维重建等</strong></p>
+                <h3>个人介绍</h3>
+                <p>山东第一医科大学本科生，专注于医学人工智能与计算机视觉领域的学习与研究，对医工交叉充满热情</p>
+                <div class="nav-card-arrow">
+                    <i class="fas fa-arrow-right"></i>
                 </div>
-                <div class="field-item">
-                    <h3><i class="fas fa-chart-line"></i> [数据科学Data Science]</h3>
-                    <p><strong>利用python的scipy、numpy、matplotlib、seaborn、pandas等数据科学相关包对数据进行分析和预处理</strong></p>
+            </a>
+
+            <a href="study-fields.html" class="nav-card nav-card-2">
+                <div class="nav-card-icon">
+                    <i class="fas fa-microscope"></i>
                 </div>
-                <!-- 您可以根据需要添加更多领域 -->
-            </div>
-        </section>
-
-        <section id="awards" class="card">
-            <h2 class="section-title"><i class="fas fa-trophy icon-left"></i>获奖情况</h2>
-            <ul class="fancy-list">
-                <li>
-                    <span class="list-year">[2025]</span> <strong>[计算机设计大赛山东省省一]</strong>
-                    <p class="list-description">[大一跟着学长学姐参加的，只负责了ppt的设计]</p>
-                </li>
-                <li>
-                    <span class="list-year">[2025]</span> <strong>[大学生创新创业训练计划项目国家级]</strong>
-                    <p class="list-description">[大一跟着学长学姐参加的，作为大一成员还是写了除技术板块的一些内容的，这是我对这个领域最开始了解时间，在此特别感谢负责老师与学长学姐们！目前还在准备结项中...]</p>
-                </li>
-                <!-- 根据需要添加更多获奖信息 -->
-            </ul>
-        </section>
-
-        <section id="publications" class="card">
-            <h2 class="section-title"><i class="fas fa-book-open icon-left"></i>论文情况</h2>
-            <ul class="fancy-list">
-                <li>
-                    <span class="list-year">[2025]</span> <strong>&ldquo;<a href="[暂无嘻嘻]" target="_blank">[暂无]</a>&rdquo;, [暂无], [暂无].</strong>
-                    <p class="list-description">[现在是三无将军！！！]</p>
-                </li>
-                <!-- 根据需要添加更多论文信息 -->
-            </ul>
-        </section>
-
-        <!-- 新增版块：年度总结与未来展望 (可展开) -->
-        <section id="annual-summary" class="card collapsible-section">
-            <div class="collapsible-header" onclick="toggleCollapse('annual-summary-content')">
-                <h2 class="section-title"><i class="fas fa-calendar-alt icon-left"></i>年度总结与未来展望</h2>
-                <i class="fas fa-chevron-down collapse-icon"></i>
-            </div>
-            <div id="annual-summary-content" class="collapsible-content">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <h3>[大一学年] 年度总结</h3>
-                        <p>
-                            作为大一计算机相关的工科新生，不得不承认计算机真的是一项很伟大的工具，其中可以做的事非常之多。在迷茫的时候与相关朋友聊天时得到了相关指导后开始入门深度学习和计算机视觉等领域，
-                            虽然他是做YOLO和SLAM的，而我是做医学AI的，但是其实这些不同学科之间有很多通用性。在结束了高等数学、线性代数、概率论等相关学科的基础学习后，
-                            我在2025年的大一暑假正式开始了该领域的学习。
-                        </p>
-                    </div>
-                    <div class="timeline-item">
-                        <h3>未来展望</h3>
-                        <p>
-                            期待能自己主持一篇大创项目，亦或参加更多有含金量的比赛，认识到更多该领域的学者们。
-                        </p>
-                    </div>
+                <h3>学习领域</h3>
+                <p>深度学习、计算机视觉、数据科学三大方向，涵盖神经网络、图像处理、医学影像分析等技术</p>
+                <div class="nav-card-arrow">
+                    <i class="fas fa-arrow-right"></i>
                 </div>
-            </div>
-        </section>
+            </a>
 
-        <!-- 新增版块：学习动态 (可展开) -->
-        <section id="learning-updates" class="card collapsible-section">
-            <div class="collapsible-header" onclick="toggleCollapse('learning-updates-content')">
-                <h2 class="section-title"><i class="fas fa-chalkboard-teacher icon-left"></i>学习动态</h2>
-                <i class="fas fa-chevron-down collapse-icon"></i>
-            </div>
-            <div id="learning-updates-content" class="collapsible-content">
-                <ul class="fancy-list">
-                    <li>
-                        <span class="list-year">[2025.10.16]</span> <strong>完成了较为经典的基础卷积神经网络学习</strong>
-                        <p class="list-description">完成并实践了LeNet、AlexNet、GoogLeNet、VGG、ResNet网络的学习，并精读了ResNet的论文《Deep Residual Learning for Image Recognition》</p>
-                    </li>
-                    <li>
-                        <span class="list-year">[2025.10]</span> <strong>开始准备明年4月份的大创申请书</strong>
-                        <p class="list-description">这将会是个巨大的工程...</p>
-                    </li>
-                    <!-- 根据需要添加更多学习动态 -->
-                </ul>
-            </div>
-        </section>
-
-        <section id="contact" class="card">
-            <h2 class="section-title"><i class="fas fa-envelope icon-left"></i>联系方式</h2>
-            <div class="contact-info">
-                <p>
-                  <i class="fas fa-envelope-open-text icon-contact"></i>
-                  邮箱1：<a href="mailto:zlyd20060615@163.com" style="margin-right: 15px;">zlyd20060615@163.com</a>
-                  邮箱2：<a href="mailto:zhouluoyidi@gmail.com">zhouluoyidi@gmail.com</a>
-                </p>
-                <p><i class="fas fa-phone-alt icon-contact"></i> 电话：19144210452</p>
-                <p><i class="fab fa-github icon-contact"></i> GitHub：<a href="https://github.com/zlyd-CV" target="_blank">https://github.com/zlyd-CV</a></p>
-                <p><i class="fas fa-user-graduate icon-contact"></i> AMiner：<a href="https://www.aminer.cn/profile/68f0ec1d9329f86005abb67c" target="_blank">AMiner主页(点击跳转)</a></p>
-                <p><i class="fas fa-graduation-cap icon-contact"></i> 谷歌学术：<a href="https://scholar.google.com/citations?hl=zh-CN&user=R4WXdXMAAAAJ&view_op=list_works&gmla=AH8HC4xCbDlc__IIFtu0yM6kMxdgb-WsWL3AyoJN9GwVOqLz2cmVJy0RnypqC4pV238y4eg5CKEMN4nSk8YrJ7n-MguIAuTJo8vv-dD-Z67GRAcL9EQqFyIMAbJUXk6M35Imcjk5RCN9yXj7" target="_blank">谷歌学术主页(点击跳转)</a></p>
-            </div>
-        </section>
-
-        <section id="changelog" class="card">
-            <div class="collapsible-header" onclick="toggleCollapse('changelog-content')">
-                <h2 class="section-title"><i class="fas fa-history icon-left"></i>更新日志</h2>
-                <i class="fas fa-chevron-down collapse-icon"></i>
-            </div>
-            <div id="changelog-content" class="collapsible-content">
-                <div class="changelog-container">
-                    <div class="changelog-entry">
-                        <h3>v1.1.1 - 2025.10.21</h3>
-                        <ul>
-                            <li>1.新增了版本号与更新日志模块，用于记录更新内容</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="changelog-entry">
-                        <h3>v1.1.0 - 2025.10.19</h3>
-                        <ul>
-                            <li>1.重新设计整体配色方案</li>
-                            <li>2.增强交互动画效果，提升交互反馈</li>
-                            <li>3.为一些板块设计了折叠样式</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="changelog-entry">
-                        <h3>v1.0.0 - 2025.10.17</h3>
-                        <ul>
-                            <li>1.网站初始版本上线</li>
-                            <li>2.完成个人介绍、学习领域等基础模块</li>
-                            <li>3.添加联系方式信息</li>
-                        </ul>
-                    </div>
+            <a href="awards.html" class="nav-card nav-card-3">
+                <div class="nav-card-icon">
+                    <i class="fas fa-trophy"></i>
                 </div>
-            </div>
+                <h3>获奖情况</h3>
+                <p>计算机设计大赛山东省省一、大学生创新创业训练计划项目国家级等荣誉，记录成长足迹</p>
+                <div class="nav-card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="publications.html" class="nav-card nav-card-4">
+                <div class="nav-card-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <h3>论文情况</h3>
+                <p>学术成果展示区域，目前正在积累中，期待未来的学术产出与研究突破</p>
+                <div class="nav-card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="annual-summary.html" class="nav-card nav-card-5">
+                <div class="nav-card-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>年度总结</h3>
+                <p>记录大一学年的成长历程，从入门到实践，分享学习心得与未来规划</p>
+                <div class="nav-card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="learning-updates.html" class="nav-card nav-card-6">
+                <div class="nav-card-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3>学习动态</h3>
+                <p>最新学习进展实时更新，包括经典CNN网络学习、论文精读、大创项目准备等</p>
+                <div class="nav-card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="contact.html" class="nav-card nav-card-7">
+                <div class="nav-card-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>联系方式</h3>
+                <p>邮箱、电话、GitHub、AMiner、谷歌学术等多种联系方式，欢迎学术交流与合作</p>
+                <div class="nav-card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="changelog.html" class="nav-card nav-card-8">
+                <div class="nav-card-icon">
+                    <i class="fas fa-history"></i>
+                </div>
+                <h3>更新日志</h3>
+                <p>网站版本更新历史记录，从v1.0.0到当前版本的所有改进与新增功能</p>
+                <div class="nav-card-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
         </section>
-        
+
         <p style="text-align: center; margin-top: 40px; margin-bottom: 60px; color: var(--text-light); font-size: 0.95em; opacity: 0.7;">&copy; [2025] [zlyd-CV]. All rights reserved.</p>
     </div>
 
-    <!-- JavaScript for collapsible sections -->
     <script>
-        function toggleCollapse(contentId) {
-            const content = document.getElementById(contentId);
-            const icon = content.previousElementSibling.querySelector('.collapse-icon');
+        // 倒计时计算函数
+        function updateCountdown() {
+            const now = new Date();
             
-            if (content.classList.contains('active')) {
-                content.classList.remove('active');
-                icon.style.transform = 'rotate(0deg)';
+            // 英语四级考试日期 (假设是2025年12月21日)
+            const cet4Date = new Date('2025-12-21');
+            const cet4Diff = Math.ceil((cet4Date - now) / (1000 * 60 * 60 * 24));
+            
+            // 2028考研日期 (2027年12月第一个周末，假设是2027年12月18日)
+            const kaoyanDate = new Date('2027-12-18');
+            const kaoyanDiff = Math.ceil((kaoyanDate - now) / (1000 * 60 * 60 * 24));
+            
+            // 更新显示
+            const cet4Element = document.getElementById('cet4-countdown');
+            const kaoyanElement = document.getElementById('kaoyan-countdown');
+            
+            if (cet4Diff > 0) {
+                cet4Element.textContent = `还有 ${cet4Diff} 天`;
+                cet4Element.style.color = cet4Diff <= 30 ? '#f5576c' : '#667eea';
             } else {
-                content.classList.add('active');
-                icon.style.transform = 'rotate(180deg)';
+                cet4Element.textContent = '已结束';
+                cet4Element.style.color = '#999';
+            }
+            
+            if (kaoyanDiff > 0) {
+                const years = Math.floor(kaoyanDiff / 365);
+                const days = kaoyanDiff % 365;
+                kaoyanElement.textContent = `还有 ${years}年${days}天`;
+                kaoyanElement.style.color = '#667eea';
+            } else {
+                kaoyanElement.textContent = '已结束';
+                kaoyanElement.style.color = '#999';
             }
         }
+        
+        // 页面加载时执行
+        updateCountdown();
+        // 每天更新一次
+        setInterval(updateCountdown, 1000 * 60 * 60 * 24);
     </script>
 </body>
 </html>

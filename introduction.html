@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人介绍 - zlyd-CV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-button {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,249,255,0.98));
+            backdrop-filter: blur(20px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            text-decoration: none;
+        }
+        
+        .back-button i {
+            font-size: 1.5em;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.4s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-10px) scale(1.1);
+            box-shadow: 0 12px 40px rgba(102, 126, 234, 0.25);
+        }
+        
+        .back-button:hover i {
+            transform: translateX(-3px);
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .page-title h1 {
+            font-size: 3.5em;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: -2px;
+            filter: drop-shadow(0 10px 30px rgba(102, 126, 234, 0.3));
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button" title="返回主页">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <div class="container">
+        <div class="page-title">
+            <h1><i class="fas fa-user-graduate"></i> 个人介绍</h1>
+        </div>
+
+        <section class="card">
+            <h2 class="section-title"><i class="fas fa-user-graduate icon-left"></i>个人介绍</h2>
+            <p>
+                您好！我是一名对 <strong>医工交叉领域</strong> 充满热情的本科生。目前在 <strong>山东第一医科大学</strong>攻读本科学位，专注于 <strong>医学人工智能、计算机视觉</strong>的相关知识学习。
+            </p>
+            <p>
+                目前，我还在努力地学习相关的基础知识，希望能够认识更多的对医工交叉抱有强烈兴趣的大佬们，也欢迎各位学术大咖给予我相应的学习建议或者志同道合的同学与我进行相关的学术交流。
+            </p>
+            <p>
+                个人联系方式：<strong>微信：19144210452</strong>
+            </p>
+        </section>
+    </div>
+</body>
+</html>
