@@ -1,0 +1,92 @@
+/* ============================================
+    Page Specific Styles (Inner Pages)
+   ============================================ */
+
+/* Back Button */
+.back-button {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #667eea;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.back-button:hover {
+    transform: translateX(-5px) scale(1.1);
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+    color: #764ba2;
+}
+
+/* Page Title Area */
+.page-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-title h1 {
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.page-title h1 i {
+    font-size: 0.9em;
+}
+
+/* Content Card */
+.card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: #4a4a6a;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid rgba(102, 126, 234, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.icon-left {
+    margin-right: 12px;
+    color: #667eea;
+}
+
+.card p {
+    line-height: 1.8;
+    color: #4a4a6a;
+    margin-bottom: 1.5em;
+    font-size: 1.05em;
+}
+
+.card strong {
+    color: #764ba2;
+    font-weight: 600;
+}

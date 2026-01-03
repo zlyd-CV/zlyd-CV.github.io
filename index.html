@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>zlyd-CV的个人网站</title>
     <!-- 引入Google Fonts - Montserrat 和 Open Sans，提供更现代的字体选择 -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <!-- 引入 Font Awesome 图标库，用于更丰富的图标选择 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- 引入自定义的样式表 -->
-    <link rel="stylesheet" href="style.css?v=1.2.2">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.2.4">
 </head>
+
 <body>
     <div class="container">
         <header class="hero-section">
@@ -18,38 +22,22 @@
                 <div class="geo-frame geo-layer-1"></div>
                 <div class="geo-frame geo-layer-2"></div>
                 <div class="geo-frame geo-layer-3"></div>
-                <img src="https://raw.githubusercontent.com/zlyd-CV/zlyd-CV.github.io/main/头像.jpg" alt="头像">
+                <img src="assets/images/头像.jpg" alt="头像">
             </div>
-            <h1>zlyd-CV</h1>
-            <p class="tagline">create on 2025.10.17</p>
-            <p class="update-info">last update: 2025.10.30 | version: v1.2.0</p>
-            <p class="welcome-text">欢迎来到我的个人网站,点击下方卡片了解更多信息</p>
-            
-            <!-- 重大事件倒计时卡片 -->
-            <div class="countdown-card">
-                <div class="countdown-header">
-                    <i class="fas fa-clock"></i>
-                    <h3>重大事件倒计时</h3>
-                </div>
-                <div class="countdown-content">
-                    <div class="countdown-item">
-                        <div class="countdown-icon">
-                            <i class="fas fa-book-reader"></i>
-                        </div>
-                        <div class="countdown-info">
-                            <h4>英语四级考试</h4>
-                            <p class="countdown-date" id="cet4-countdown">计算中...</p>
-                        </div>
-                    </div>
-                    <div class="countdown-item">
-                        <div class="countdown-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="countdown-info">
-                            <h4>2028考研</h4>
-                            <p class="countdown-subtitle">27年12月初试</p>
-                            <p class="countdown-date" id="kaoyan-countdown">计算中...</p>
-                        </div>
+
+            <div class="header-content">
+                <h1>zlyd-CV</h1>
+                <p class="tagline">create on 2025.10.17 | v1.2.4</p>
+                <p class="welcome-text">欢迎来到我的个人网站</p>
+            </div>
+
+            <!-- 恒星布局倒计时 (Orb Layout) -->
+            <div class="star-countdown">
+                <div class="star-orb">
+                    <i class="fas fa-graduation-cap"></i>
+                    <div class="star-info">
+                        <span class="star-label">2028 考研</span>
+                        <span class="star-date" id="kaoyan-countdown">Calc...</span>
                     </div>
                 </div>
             </div>
@@ -57,138 +45,92 @@
 
         <!-- 导航卡片网格 -->
         <section class="navigation-grid">
-            <a href="introduction.html" class="nav-card nav-card-1">
+            <a href="pages/introduction.html" class="nav-card nav-card-1">
                 <div class="nav-card-icon">
                     <i class="fas fa-user-graduate"></i>
                 </div>
                 <h3>个人介绍</h3>
-                <p>山东第一医科大学本科生，专注于医学人工智能与计算机视觉领域的学习与研究，对医工交叉充满热情</p>
                 <div class="nav-card-arrow">
                     <i class="fas fa-arrow-right"></i>
                 </div>
             </a>
 
-            <a href="study-fields.html" class="nav-card nav-card-2">
+            <a href="pages/study-fields.html" class="nav-card nav-card-2">
                 <div class="nav-card-icon">
                     <i class="fas fa-microscope"></i>
                 </div>
                 <h3>学习领域</h3>
-                <p>深度学习、计算机视觉、数据科学三大方向，涵盖神经网络、图像处理、医学影像分析等技术</p>
                 <div class="nav-card-arrow">
                     <i class="fas fa-arrow-right"></i>
                 </div>
             </a>
 
-            <a href="awards.html" class="nav-card nav-card-3">
+            <a href="pages/awards.html" class="nav-card nav-card-3">
                 <div class="nav-card-icon">
                     <i class="fas fa-trophy"></i>
                 </div>
                 <h3>获奖情况</h3>
-                <p>计算机设计大赛山东省省一、大学生创新创业训练计划项目国家级等荣誉，记录成长足迹</p>
                 <div class="nav-card-arrow">
                     <i class="fas fa-arrow-right"></i>
                 </div>
             </a>
 
-            <a href="publications.html" class="nav-card nav-card-4">
+            <a href="pages/publications.html" class="nav-card nav-card-4">
                 <div class="nav-card-icon">
                     <i class="fas fa-book-open"></i>
                 </div>
                 <h3>论文情况</h3>
-                <p>学术成果展示区域，目前正在积累中，期待未来的学术产出与研究突破</p>
                 <div class="nav-card-arrow">
                     <i class="fas fa-arrow-right"></i>
                 </div>
             </a>
 
-            <a href="annual-summary.html" class="nav-card nav-card-5">
+            <a href="pages/annual-summary.html" class="nav-card nav-card-5">
                 <div class="nav-card-icon">
                     <i class="fas fa-calendar-alt"></i>
                 </div>
                 <h3>年度总结</h3>
-                <p>记录大一学年的成长历程，从入门到实践，分享学习心得与未来规划</p>
                 <div class="nav-card-arrow">
                     <i class="fas fa-arrow-right"></i>
                 </div>
             </a>
 
-            <a href="learning-updates.html" class="nav-card nav-card-6">
+            <a href="pages/learning-updates.html" class="nav-card nav-card-6">
                 <div class="nav-card-icon">
                     <i class="fas fa-chalkboard-teacher"></i>
                 </div>
                 <h3>学习动态</h3>
-                <p>最新学习进展实时更新，包括经典CNN网络学习、论文精读、大创项目准备等</p>
                 <div class="nav-card-arrow">
                     <i class="fas fa-arrow-right"></i>
                 </div>
             </a>
 
-            <a href="contact.html" class="nav-card nav-card-7">
+            <a href="pages/contact.html" class="nav-card nav-card-7">
                 <div class="nav-card-icon">
                     <i class="fas fa-envelope"></i>
                 </div>
                 <h3>联系方式</h3>
-                <p>邮箱、电话、GitHub、AMiner、谷歌学术等多种联系方式，欢迎学术交流与合作</p>
                 <div class="nav-card-arrow">
                     <i class="fas fa-arrow-right"></i>
                 </div>
             </a>
 
-            <a href="changelog.html" class="nav-card nav-card-8">
+            <a href="pages/changelog.html" class="nav-card nav-card-8">
                 <div class="nav-card-icon">
                     <i class="fas fa-history"></i>
                 </div>
                 <h3>更新日志</h3>
-                <p>网站版本更新历史记录，从v1.0.0到当前版本的所有改进与新增功能</p>
                 <div class="nav-card-arrow">
                     <i class="fas fa-arrow-right"></i>
                 </div>
             </a>
         </section>
 
-        <p style="text-align: center; margin-top: 40px; margin-bottom: 60px; color: var(--text-light); font-size: 0.95em; opacity: 0.7;">&copy; [2025] [zlyd-CV]. All rights reserved.</p>
+        <p class="copyright">&copy; 2025 zlyd-CV. All rights reserved.</p>
     </div>
 
-    <script>
-        // 倒计时计算函数
-        function updateCountdown() {
-            const now = new Date();
-            
-            // 英语四级考试日期 (假设是2025年12月21日)
-            const cet4Date = new Date('2025-12-21');
-            const cet4Diff = Math.ceil((cet4Date - now) / (1000 * 60 * 60 * 24));
-            
-            // 2028考研日期 (2027年12月第一个周末，假设是2027年12月18日)
-            const kaoyanDate = new Date('2027-12-18');
-            const kaoyanDiff = Math.ceil((kaoyanDate - now) / (1000 * 60 * 60 * 24));
-            
-            // 更新显示
-            const cet4Element = document.getElementById('cet4-countdown');
-            const kaoyanElement = document.getElementById('kaoyan-countdown');
-            
-            if (cet4Diff > 0) {
-                cet4Element.textContent = `还有 ${cet4Diff} 天`;
-                cet4Element.style.color = cet4Diff <= 30 ? '#f5576c' : '#667eea';
-            } else {
-                cet4Element.textContent = '已结束';
-                cet4Element.style.color = '#999';
-            }
-            
-            if (kaoyanDiff > 0) {
-                const years = Math.floor(kaoyanDiff / 365);
-                const days = kaoyanDiff % 365;
-                kaoyanElement.textContent = `还有 ${years}年${days}天`;
-                kaoyanElement.style.color = '#667eea';
-            } else {
-                kaoyanElement.textContent = '已结束';
-                kaoyanElement.style.color = '#999';
-            }
-        }
-        
-        // 页面加载时执行
-        updateCountdown();
-        // 每天更新一次
-        setInterval(updateCountdown, 1000 * 60 * 60 * 24);
-    </script>
+    <!-- 引入自定义脚本 -->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>

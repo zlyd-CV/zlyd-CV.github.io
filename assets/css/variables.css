@@ -1,0 +1,20 @@
+/* ============================================
+    终极炫酷浅色系设计 - 全力释放版
+    Ultimate Light Theme - Full Power Edition
+   ============================================ */
+
+:root {
+    /* 超丰富的渐变色彩库 */
+    --purple-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --pink-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --blue-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --green-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    --orange-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    --sunset-gradient: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    --ocean-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    --rainbow-gradient: linear-gradient(90deg, #667eea, #764ba2, #f5576c, #4facfe, #43e97b, #fee140);
+    
+    --text-dark: #1a1a2e;
+    --text-medium: #4a4a6a;
+    --text-light: #7a7a9a;
+}

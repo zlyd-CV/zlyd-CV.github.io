@@ -1,0 +1,361 @@
+/* ============================================
+    组件模块样式 (Component Modules)
+    Matches "Ultimate Light Theme"
+    Refined for better animations and edge effects
+   ============================================ */
+
+/* -------------------------------------------
+   Profile Avatar Area
+   ------------------------------------------- */
+.profile-avatar {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 10;
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.25);
+    border: 4px solid #fff;
+    position: relative;
+    animation: avatarFloat 6s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.profile-avatar:hover img {
+    transform: scale(1.05);
+}
+
+@keyframes avatarFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+/* Geometric Frames (New "Orbit" Design) */
+.geo-frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Layer 1: The main rotating gradient orbit */
+.geo-layer-1 {
+    width: 170px;
+    height: 170px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+
+    /* Create a gradient border effect using a pseudo-element mask or simple colored borders for browser compatibility */
+    border-top-color: #667eea;
+    /* Purple-ish */
+    border-right-color: #764ba2;
+    /* Darker Purple */
+    border-bottom-color: transparent;
+    /* Gap */
+    border-left-color: #667eea;
+
+    animation: orbitSpin 4s linear infinite;
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.2);
+}
+
+/* Layer 2: Inner thin reverse orbit */
+.geo-layer-2 {
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgba(245, 87, 108, 0.5);
+    /* Pinkish */
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    animation: orbitSpinReverse 6s linear infinite;
+}
+
+/* Layer 3: Soft outer ripple/glow */
+.geo-layer-3 {
+    width: 190px;
+    height: 190px;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+    animation: orbitPulse 3s ease-in-out infinite;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, transparent 60%);
+}
+
+@keyframes orbitSpin {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes orbitSpinReverse {
+    from {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+@keyframes orbitPulse {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(0.95);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+
+/* -------------------------------------------
+   Star Countdown (Compact Version)
+   ------------------------------------------- */
+.star-countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.star-orb {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 12px 25px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 2px 4px -1px rgba(0, 0, 0, 0.03),
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.star-orb:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 15px -3px rgba(102, 126, 234, 0.2),
+        0 4px 6px -2px rgba(102, 126, 234, 0.1),
+        inset 0 0 20px rgba(255, 255, 255, 0.8);
+    border-color: rgba(102, 126, 234, 0.4);
+}
+
+.star-orb i {
+    font-size: 1.4em;
+    background: var(--purple-gradient, linear-gradient(135deg, #667eea 0%, #764ba2 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(102, 126, 234, 0.3));
+}
+
+.star-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.25;
+}
+
+.star-label {
+    font-size: 0.75em;
+    color: #7a7a9a;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.star-date {
+    font-size: 1.1em;
+    font-weight: 800;
+    background: var(--purple-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* -------------------------------------------
+   Navigation Cards (With Edge Effects)
+   ------------------------------------------- */
+.nav-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 24px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    height: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow:
+        0 4px 20px -2px rgba(0, 0, 0, 0.05),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Gradient Border Effect via Pseudo-element opacity */
+.nav-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 2px;
+    /* Border width */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)) border-box;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.nav-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow:
+        0 20px 40px -5px rgba(102, 126, 234, 0.15),
+        0 10px 20px -5px rgba(102, 126, 234, 0.1);
+    border-color: transparent;
+    /* Use gradient border or subtle tint */
+}
+
+/* Enhance Edge Effect on Hover */
+.nav-card:hover::after {
+    background: var(--purple-gradient, linear-gradient(135deg, #667eea, #764ba2));
+    opacity: 1;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+
+/* Card Icons */
+.nav-card-icon {
+    font-size: 2.2em;
+    margin-bottom: 12px;
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    background: var(--purple-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 8px 16px rgba(102, 126, 234, 0.2));
+}
+
+.nav-card h3 {
+    font-size: 1.15em;
+    color: #4a4a6a;
+    font-weight: 700;
+    margin: 0;
+    transition: color 0.3s ease;
+    letter-spacing: 0.02em;
+}
+
+.nav-card-arrow {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    transform: translateX(-15px);
+    transition: all 0.4s ease;
+    color: #667eea;
+    font-size: 0.9em;
+}
+
+.nav-card:hover .nav-card-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nav-card:hover .nav-card-icon {
+    transform: scale(1.15) rotate(8deg);
+}
+
+.nav-card:hover h3 {
+    color: #2c2c54;
+}
+
+/* Specific Card Colors */
+.nav-card-1 .nav-card-icon,
+.nav-card-1:hover::after {
+    background: var(--purple-gradient);
+    -webkit-background-clip: text;
+}
+
+.nav-card-2 .nav-card-icon,
+.nav-card-2:hover::after {
+    background: var(--blue-gradient);
+    -webkit-background-clip: text;
+}
+
+.nav-card-3 .nav-card-icon,
+.nav-card-3:hover::after {
+    background: var(--orange-gradient);
+    -webkit-background-clip: text;
+}
+
+.nav-card-4 .nav-card-icon,
+.nav-card-4:hover::after {
+    background: var(--pink-gradient);
+    -webkit-background-clip: text;
+}
+
+.nav-card-5 .nav-card-icon,
+.nav-card-5:hover::after {
+    background: var(--green-gradient);
+    -webkit-background-clip: text;
+}
+
+.nav-card-6 .nav-card-icon,
+.nav-card-6:hover::after {
+    background: var(--ocean-gradient);
+    -webkit-background-clip: text;
+}
+
+.nav-card-7 .nav-card-icon,
+.nav-card-7:hover::after {
+    background: var(--sunset-gradient);
+    -webkit-background-clip: text;
+}
+
+.nav-card-8 .nav-card-icon,
+.nav-card-8:hover::after {
+    background: var(--rainbow-gradient);
+    -webkit-background-clip: text;
+}
